@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "./theme-provider";
+import { ModeToggle } from "@/components/ModeToggle";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const centuryGothic = localFont({
+  src: "./fonts/CenturyGothic.woff",
+  variable: "--font-century-gothic",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const centuryGothicItalic = localFont({
+  src: "./fonts/CenturyGothic-Italic.woff",
+  variable: "--font-century-gothic-italic",
+});
+
+const centuryGothicBold = localFont({
+  src: "./fonts/CenturyGothic-Bold.woff",
+  variable: "--font-century-gothic-bold",
+});
+
+const centuryGothicBoldItalic = localFont({
+  src: "./fonts/CenturyGothic-BoldItalic.woff",
+  variable: "--font-century-gothic-bold-italic",
 });
 
 export const metadata: Metadata = {
@@ -26,10 +37,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${centuryGothic.className} antialiased`}
+        suppressHydrationWarning
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <ModeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
+export {
+  centuryGothic,
+  centuryGothicItalic,
+  centuryGothicBold,
+  centuryGothicBoldItalic,
+};
