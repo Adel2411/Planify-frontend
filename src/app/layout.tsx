@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import { ModeToggle } from "@/components/ModeToggle";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 const centuryGothic = localFont({
   src: "./fonts/CenturyGothic.woff",
@@ -37,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${centuryGothic.className} antialiased`}
+        className={`${poppins.className} antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider
