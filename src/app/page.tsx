@@ -1,10 +1,12 @@
-import * as motion from "motion/react-client";
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 
 export default function Home() {
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0, y: -30 },
     show: {
       opacity: 1,
