@@ -12,19 +12,19 @@ import { ChevronLeft } from "lucide-react";
 
 const AuthContainer = ({ children, Title }: AuthContainerProps) => {
   return (
-    <Card className="px-4">
+    <Card className="sm:px-4">
       <CardHeader>
-        <Button variant={"secondary"} asChild>
-          <Link
-            href={"/"}
-            className="w-fit opacity-60 hover:opacity-80 flex items-center justify-center gap-0"
-          >
-            <ChevronLeft />
-            Home
-          </Link>
-        </Button>
-        <CardTitle className="flex justify-center text-3xl font-bold">
-          {Title}
+        <CardTitle className="space-y-8">
+          <Button variant={"secondary"} asChild>
+            <Link
+              href={"/"}
+              className="w-fit opacity-60 hover:opacity-80 flex items-center justify-center gap-0"
+            >
+              <ChevronLeft />
+              Home
+            </Link>
+          </Button>
+          <h1 className="flex justify-center text-3xl font-bold">{Title}</h1>
         </CardTitle>
       </CardHeader>
       <CardContent>{children}</CardContent>
