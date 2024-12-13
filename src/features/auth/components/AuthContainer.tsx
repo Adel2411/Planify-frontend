@@ -8,12 +8,24 @@ import {
 import { AuthContainerProps } from "../types";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ChevronLeft } from "lucide-react";
 
 const AuthContainer = ({ children, Title }: AuthContainerProps) => {
   return (
-    <Card className="sm:px-8">
-      <CardHeader className="flex justify-center items-center">
-        <CardTitle className="text-3xl font-bold">{Title}</CardTitle>
+    <Card className="px-4">
+      <CardHeader>
+        <Button variant={"secondary"} asChild>
+          <Link
+            href={"/"}
+            className="w-fit opacity-60 hover:opacity-80 flex items-center justify-center gap-0"
+          >
+            <ChevronLeft />
+            Home
+          </Link>
+        </Button>
+        <CardTitle className="flex justify-center text-3xl font-bold">
+          {Title}
+        </CardTitle>
       </CardHeader>
       <CardContent>{children}</CardContent>
       <CardFooter>

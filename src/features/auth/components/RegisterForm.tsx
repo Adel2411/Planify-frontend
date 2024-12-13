@@ -22,7 +22,7 @@ function RegisterForm() {
   const form = useForm<RegisterInputs>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
-      name: "",
+      fullName: "",
       email: "",
       password: "",
       passwordConfirmation: "",
@@ -48,14 +48,14 @@ function RegisterForm() {
         <div className="space-y-2">
           <FormField
             control={form.control}
-            name="name"
+            name="fullName"
             render={({ field }) => (
               <FormItem className="space-y-0">
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Full name</FormLabel>
                 <FormControl>
                   <Input
                     disabled={form.formState.isSubmitting}
-                    placeholder="name..."
+                    placeholder="full name..."
                     {...field}
                   />
                 </FormControl>

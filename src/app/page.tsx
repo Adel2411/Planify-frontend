@@ -1,6 +1,8 @@
 import * as motion from "motion/react-client";
 import { centuryGothicBold, centuryGothicItalic } from "./layout";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   const container = {
@@ -36,9 +38,9 @@ export default function Home() {
         {/* DevFest Batna 2024 */}
       </motion.ul>
       <div className="flex justify-center items-center gap-4">
-        <p className={`${centuryGothicItalic.className} text-xl`}>
-          Coming Soon...
-        </p>
+        <Button className={`text-lg`} asChild variant={"link"}>
+          <Link href="/login">Log in</Link>
+        </Button>
         <Image
           src="/GDG-Batna-Logo.jpeg"
           alt="dev fest 2024 logo"
