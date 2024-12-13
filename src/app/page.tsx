@@ -1,7 +1,4 @@
-"use client";
-
-import { motion } from "motion/react";
-import { centuryGothicBold } from "./layout";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -32,7 +29,7 @@ export default function Home() {
         variants={container}
         initial="hidden"
         animate="show"
-        className={`${centuryGothicBold.className} text-4xl flex flex-wrap gap-2`}
+        className={`font-bold text-4xl flex flex-wrap gap-2`}
       >
         <motion.li variants={item}>DevFest</motion.li>
         <motion.li variants={item}>Batna</motion.li>
