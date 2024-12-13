@@ -28,12 +28,12 @@ function LoginForm() {
   });
 
   async function onSubmit(values: LoginInputs) {
-    const data = await postLogin(values);
-    if (data) {
+    const response = await postLogin(values);
+    if (response) {
       toast({
         variant: "success",
         title: "Success",
-        description: "User has successfully logged in",
+        description: response.message,
       });
       form.reset();
       redirect("/dashboard");

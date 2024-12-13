@@ -11,13 +11,11 @@ export interface AuthContainerProps {
 }
 
 export interface User {
-  _id: string;
+  fullName: string;
   email: string;
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-  session: string;
-  iat: number;
-  exp: number;
+  sub: 1 | 2 | 3;
+}
+
+export interface AuthResponse {
+  message: string;
 }

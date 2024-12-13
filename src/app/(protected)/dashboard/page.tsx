@@ -1,18 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { logOut } from "@/features/auth/utils";
 import { toast } from "@/hooks/use-toast";
 import { redirect } from "next/navigation";
 
 function Dashboard() {
-  const handleLogOut = () => {
-    console.log("Log out");
-    toast({
-      variant: "destructive",
-      title: "Logged out",
-      description: "User has successfully logged out",
-    });
-    redirect("/");
+  const handleLogOut = async () => {
+    const response = await logOut();
+    if (response) {
+      toast({
+        variant: "destructive",
+        title: "Logged out",
+        description: response.message,
+      });
+      redirect("/");
+    }
   };
 
   return (

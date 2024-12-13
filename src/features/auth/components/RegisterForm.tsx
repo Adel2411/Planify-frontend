@@ -30,12 +30,12 @@ function RegisterForm() {
   });
 
   async function onSubmit(values: RegisterInputs) {
-    const data = await postRegister(values);
-    if (data) {
+    const response = await postRegister(values);
+    if (response) {
       toast({
         variant: "success",
         title: "Success",
-        description: "You have successfully registered",
+        description: response.message,
       });
       form.reset();
       redirect("/dashboard");
