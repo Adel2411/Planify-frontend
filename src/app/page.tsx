@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 
 export default function Home() {
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0, y: -30 },
     show: {
       opacity: 1,
@@ -26,13 +26,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center gap-8">
-      <motion.ul
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="font-bold text-4xl flex flex-wrap gap-2"
-      >
+    <main className="font-bold text-4xl min-h-screen flex flex-col justify-center items-center gap-8">
+      <motion.ul variants={container} initial="hidden" animate="show">
         <motion.li variants={item}>DevFest</motion.li>
         <motion.li variants={item}>Batna</motion.li>
         <motion.li variants={item}>2024</motion.li>
