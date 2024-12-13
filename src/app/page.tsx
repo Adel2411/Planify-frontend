@@ -1,5 +1,7 @@
-import * as motion from "motion/react-client";
-import { centuryGothicBold, centuryGothicItalic } from "./layout";
+"use client";
+
+import { motion } from "motion/react";
+import { centuryGothicBold } from "./layout";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
