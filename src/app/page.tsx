@@ -26,20 +26,15 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center gap-8">
-      <motion.ul
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className={`font-bold text-4xl flex flex-wrap gap-2`}
-      >
+    <main className="font-bold text-4xl min-h-screen flex flex-col justify-center items-center gap-8">
+      <motion.ul variants={container} initial="hidden" animate="show">
         <motion.li variants={item}>DevFest</motion.li>
         <motion.li variants={item}>Batna</motion.li>
         <motion.li variants={item}>2024</motion.li>
         {/* DevFest Batna 2024 */}
       </motion.ul>
       <div className="flex justify-center items-center gap-4">
-        <Button className={`text-lg`} asChild variant={"link"}>
+        <Button className={`text-lg font-medium`} asChild variant={"link"}>
           <Link href="/login">Log in</Link>
         </Button>
         <Image
