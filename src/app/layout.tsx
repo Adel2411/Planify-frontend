@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import { ModeToggle } from "@/components/ModeToggle";
 import { Toaster } from "@/components/ui/toaster";
+import Logo from "@/components/Logo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Logo />
           {children}
           <ModeToggle />
         </ThemeProvider>
