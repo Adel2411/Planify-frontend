@@ -2,14 +2,12 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {
-  // const token = req.cookies.get("accessToken"); // Retrieve the JWT from cookies
+  const token = req.cookies.get("accessToken"); // Retrieve the JWT from cookies
   const { pathname } = req.nextUrl;
-
-  const token = true;
 
   // Define public and protected routes
   const publicRoutes = ["/", "/login", "/register"];
-  const protectedRoutes = ["/dashboard", "add-business"];
+  const protectedRoutes = ["/dashboard", "/add-business"];
 
   // If the user is authenticated and visits public routes, redirect to dashboard
   if (token && publicRoutes.includes(pathname)) {

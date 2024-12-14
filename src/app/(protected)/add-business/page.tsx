@@ -12,11 +12,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { addBusiness } from "@/features/dashboard/utils";
+import { NewBusiness } from "@/features/dashboard/types";
 
 const steps = [
   { title: "Basic Information", fields: ["name", "industry"] },
   { title: "Target Audience", fields: ["targetAudience"] },
   { title: "Goals", fields: ["goals"] },
+  { title: "Budget & Timeline", fields: ["budget", "timeline"] },
 ];
 
 export default function AddBusinessPage() {
@@ -26,6 +29,8 @@ export default function AddBusinessPage() {
     industry: "",
     targetAudience: "",
     goals: "",
+    budget: "",
+    timeline: "",
   });
   const router = useRouter();
 
@@ -48,15 +53,26 @@ export default function AddBusinessPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitting business:", formData);
-    // Here you would typically send the data to your backend
-    router.push("/dashboard");
+    try {
+      const newBusiness: NewBusiness = {
+        name: formData.name,
+        industry: formData.industry,
+        targetAudience: formData.targetAudience,
+        goals: formData.goals,
+        budget: formData.budget,
+        timeline: formData.timeline,
+      };
+      await addBusiness(newBusiness);
+      router.push("/dashboard");
+    } catch (error) {
+      console.error("Failed to add business:", error);
+    }
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen flex justify-center items-center">
       <Card className="max-w-lg mx-auto">
         <CardHeader>
           <CardTitle>Add New Business - Step {currentStep + 1}</CardTitle>
