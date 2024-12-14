@@ -5,7 +5,9 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center gap-10">
       <div className="flex flex-col justify-center items-center">
-        <h2 className={`font-bold text-5xl`}>404 ERROR</h2>
+        <h2 className={`font-bold text-5xl`}>
+          <span className="text-primary">404</span> ERROR
+        </h2>
         <p className={`font-medium`}>Requested resource not found</p>
       </div>
       <Button asChild variant={"link"}>
