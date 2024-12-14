@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${poppins.className} antialiased bg-gradient-to-br from-primary/10 to-background/50`}
         suppressHydrationWarning
       >
         <ThemeProvider

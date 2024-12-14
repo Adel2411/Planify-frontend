@@ -9,19 +9,19 @@ import { ArrowRight, Rocket, Target } from "lucide-react";
 
 const words = ["Plan", "Track", "Achieve"];
 
-export function Hero() {
+export function HeroSection() {
   return (
     <div className="h-screen relative w-full overflow-hidden flex flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ duration: 1 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="absolute inset-0 z-10"
       >
         <Boxes />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-background/50 z-15 pointer-events-none" />
+      <div className="absolute inset-0  z-15 pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
