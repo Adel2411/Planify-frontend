@@ -1,50 +1,21 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { motion, Variants } from "motion/react";
+import { HeroSection } from "@/features/landing-page/components/HeroSection";
+import { FeaturesSection } from "@/features/landing-page/components/FeaturesSection";
+import { FAQSection } from "@/features/landing-page/components/FAQSection";
+import { IntegrationSection } from "@/features/landing-page/components/IntegrationSection";
+import { CallToActionSection } from "@/features/landing-page/components/CallToActionSection";
+import { WorkflowSection } from "@/features/landing-page/components/WorkflowSection";
 
 export default function Home() {
-  const container: Variants = {
-    hidden: { opacity: 0, y: -30 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.3,
-        duration: 1.5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      },
-    },
-  };
-
-  const item = {
-    hidden: { y: -30 },
-    show: { y: 0 },
-  };
-
   return (
-    <main className="font-bold text-4xl min-h-screen flex flex-col justify-center items-center gap-8">
-      <motion.ul variants={container} initial="hidden" animate="show">
-        <motion.li variants={item}>DevFest</motion.li>
-        <motion.li variants={item}>Batna</motion.li>
-        <motion.li variants={item}>2024</motion.li>
-        {/* DevFest Batna 2024 */}
-      </motion.ul>
-      <div className="flex justify-center items-center gap-4">
-        <Button className={`text-lg font-medium`} asChild variant={"link"}>
-          <Link href="/login">Log in</Link>
-        </Button>
-        <Image
-          src="/GDG-Batna-Logo.jpeg"
-          alt="dev fest 2024 logo"
-          width={50}
-          height={50}
-          className="rounded-md object-cover"
-        />
-      </div>
+    <main className="min-h-screen flex flex-col">
+      <HeroSection />
+      <FeaturesSection />
+      <WorkflowSection />
+      <IntegrationSection />
+      <FAQSection />
+      <CallToActionSection />
     </main>
   );
 }
