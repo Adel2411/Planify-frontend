@@ -8,19 +8,19 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "How does Planify assist with marketing strategy?",
+      question: "How does Planify create marketing roadmaps?",
       answer:
-        "Planify generates AI-powered, personalized marketing strategies tailored to your business goals, helping you reach the right audience and maximize results.",
+        "Planify uses AI to generate personalized marketing plans based on your answers to targeted questions about your business goals and audience.",
     },
     {
-      question: "Is Planify suitable for all industries?",
+      question: "Can Planify be used for any type of business?",
       answer:
-        "Yes! Planify is designed to cater to businesses across various industries, providing customizable plans that address the unique challenges of each sector.",
+        "Absolutely! Planify is designed to support startups, small businesses, and enterprises in any industry, providing tailored strategies for their unique needs.",
     },
     {
-      question: "What kind of customer support is available?",
+      question: "What support options are available for Planify users?",
       answer:
-        "We offer round-the-clock support via email, live chat, and phone to ensure you get the help you need to optimize your experience with Planify.",
+        "We provide 24/7 customer support through email, live chat, and phone to ensure a seamless experience while using Planify.",
     },
   ];
 

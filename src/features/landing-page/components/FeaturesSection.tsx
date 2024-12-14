@@ -17,21 +17,21 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Target,
-      title: "Personalized Marketing Goals",
+      title: "Start with a Clear Roadmap",
       description:
-        "Set tailored objectives for your business with insights driven by AI and your unique inputs.",
+        "Planify generates an AI-powered roadmap to kickstart your business marketing journey.",
     },
     {
       icon: Rocket,
-      title: "AI-Driven Marketing Plans",
+      title: "AI-Generated Marketing Plans",
       description:
-        "Receive custom, actionable strategies to boost your marketing efforts and drive growth.",
+        "Get personalized strategies crafted by AI based on your business goals and inputs.",
     },
     {
       icon: BarChart2,
-      title: "Insightful Analytics",
+      title: "Track Your Business Progress",
       description:
-        "Track your campaigns and performance with clear dashboards and actionable data.",
+        "Monitor your businesses and marketing plans with insightful, easy-to-use dashboards.",
     },
   ];
 

@@ -6,21 +6,21 @@ export function IntegrationSection() {
   const integrations = [
     {
       icon: LayoutGrid,
-      title: "Business Tool Integrations",
+      title: "Seamless Business Integrations",
       description:
-        "Connect Planify with your existing CRM, analytics, and marketing platforms to streamline your workflows.",
+        "Link Planify with CRM, analytics, and marketing tools to simplify your business management.",
     },
     {
       icon: Link2,
-      title: "Custom API Solutions",
+      title: "Flexible API Integration",
       description:
-        "Easily extend Planify's functionality by integrating your business's unique data through our API.",
+        "Enhance Planify's capabilities by connecting your custom data and workflows through our API.",
     },
     {
       icon: Zap,
-      title: "Accelerated Data Analysis",
+      title: "Real-Time AI Insights",
       description:
-        "Sync your data instantly for faster and more informed marketing decisions.",
+        "Integrate your data to generate actionable marketing strategies and decisions faster than ever.",
     },
   ];
 

@@ -13,30 +13,30 @@ export function WorkflowSection() {
   const workflowSteps = [
     {
       icon: Workflow,
-      title: "Tailored Plan Creation",
+      title: "Create a Business Plan",
       description:
-        "Develop personalized marketing plans using AI-driven insights and your business inputs.",
+        "Answer a series of targeted questions to shape your unique business roadmap.",
       color: "text-blue-500",
     },
     {
       icon: Layers,
-      title: "Actionable Task Breakdown",
+      title: "AI-Generated Marketing Roadmap",
       description:
-        "Simplify your strategies by breaking them into focused, manageable tasks.",
+        "Receive a step-by-step marketing plan tailored to your business goals and audience.",
       color: "text-green-500",
     },
     {
       icon: Clock,
-      title: "Optimized Time Management",
+      title: "Structured Task Management",
       description:
-        "Efficiently schedule tasks and allocate resources to maximize productivity.",
+        "Follow an organized timeline with prioritized tasks to bring your plan to life efficiently.",
       color: "text-purple-500",
     },
     {
       icon: BarChart3,
-      title: "Data-Driven Performance Monitoring",
+      title: "Track Progress and Refine",
       description:
-        "Track progress, gather insights, and refine strategies in real-time to achieve your goals.",
+        "Monitor your business growth, adjust your strategies, and stay aligned with your goals.",
       color: "text-orange-500",
     },
   ];
@@ -60,7 +60,7 @@ export function WorkflowSection() {
 
       <div className="relative">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-1 bg-primary/20 h-full absolute"></div>
+          <div className="w-1 bg-primary/50 -z-10 h-full absolute"></div>
         </div>
         <div className="grid gap-8">
           {workflowSteps.map((step, index) => (
