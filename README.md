@@ -1,70 +1,114 @@
 # Planify - Hackathon Project 🚀
 
-Planify is a SaaS platform designed to help entrepreneurs and business owners generate personalized, AI-driven marketing roadmaps for their businesses. This project was created for a hackathon and provides an intuitive workflow for creating and managing marketing plans.
+[Planify Frontend Repository](https://github.com/Adel2411/Planify-frontend)
 
-## 🌟 Features - **Account Management:** Create or log in to an account to access the platform.
+Planify is a SaaS platform designed to empower entrepreneurs and business owners by generating personalized, AI-driven marketing roadmaps. Built for a hackathon, Planify simplifies the process of creating and managing business marketing plans through an intuitive and modern interface.
 
-- **Business Dashboard:** Manage multiple businesses, each represented by a card in the dashboard.
-- **AI-Driven Roadmaps:** Complete a multi-step form about your business, and Planify generates an initial marketing plan tailored to your inputs (no backend integration yet).
-- **User-Friendly Interface:** A clean and responsive UI built with Next.js, inspired by tools like Vercel.
+---
+
+## 🌟 Features
+
+### 🔐 Account Management
+
+- **Secure Authentication**: Create or log in to an account to access your dashboard.
+
+### 📊 Business Dashboard
+
+- **Manage Multiple Businesses**: Each business is represented as a card in your dashboard for easy access and organization.
+
+### 🤖 AI-Driven Roadmaps
+
+- **Tailored Marketing Plans**: Fill out a multi-step form about your business, and Planify generates a marketing roadmap customized to your needs (mocked functionality).
+
+### 🔄 User-Friendly Interface
+
+- **Clean and Responsive Design**: Built with Next.js, drawing inspiration from platforms like Vercel to ensure an intuitive user experience.
+
+---
 
 ## 🔧 Tech Stack
 
-- **Frontend:** Next.js with TypeScript for modern and efficient UI development.
-- **Backend (Placeholder):** Go for server-side functionality.
-- **AI Integration (Future Implementation):** Python with LangChain to generate marketing strategies (not yet connected).
+| Layer              | Technology           |
+| ------------------ | -------------------- |
+| **Frontend**       | Next.js (TypeScript) |
+| **Backend**        | Go (Placeholder)     |
+| **AI Integration** | Python (LangChain)   |
 
-## 🚧 Known Issues
+---
 
-1. **Backend Integration:**  
-   Currently, there is no integration between the frontend and backend. All roadmap generation functionality is mocked on the frontend.
+## 🚧 Current Limitations
 
-2. **Authentication:**
-   - Planify uses cookie-based authentication, but due to a cookies issue, manual intervention is required to access the `/dashboard` route.
-   - To bypass the issue and simulate an authenticated state, follow the steps below.
+1. **Backend Integration**
 
-## 🛠️ Steps to Manually Set Authentication Cookie
+   - Backend functionality is not yet connected. Roadmap generation is mocked on the frontend.
 
-To access the `/dashboard` route, manually set a cookie in your browser:
+2. **Authentication Issue**
+   - A cookies issue requires manual setup to simulate an authenticated state for accessing the `/dashboard` route.
 
-1. **Open Developer Tools:**
+---
 
-   - In your browser, press `F12` or right-click anywhere on the page and select **Inspect**.
+## 🚚 Workaround: Manually Set Authentication Cookie
 
-2. **Navigate to the Application Tab:**
+To access the `/dashboard` route, follow these steps to set an `accessToken` cookie in your browser:
 
-   - Go to the **Application** tab (in Chrome/Edge) or **Storage** tab (in Firefox).
+1. **Open Developer Tools**
 
-3. **Set the `accessToken` Cookie:**
+   - Press `F12` or right-click anywhere on the page and select **Inspect**.
 
-   - Locate the **Cookies** section under **Storage** in Developer Tools.
-   - Select the domain of your running application (e.g., `localhost`).
-   - Add a new cookie with the following details:
+2. **Go to Application/Storage Tab**
+
+   - Navigate to the **Application** tab (Chrome/Edge) or **Storage** tab (Firefox).
+
+3. **Set the Cookie**
+
+   - Locate the **Cookies** section under **Storage**.
+   - Choose the domain of your app (e.g., `localhost`).
+   - Add a new cookie with these details:
      - **Name:** `accessToken`
-     - **Value:** Any string (e.g., `dummyToken123`).
+     - **Value:** Any string (e.g., `dummyToken123`)
      - **Domain:** Your app’s domain (e.g., `localhost`).
-   - Save the cookie.
 
-4. **Access the Dashboard:**
-   - Refresh the page and navigate to `/dashboard` to view the mock dashboard.
+4. **Refresh the Page**
+   - Navigate to `/dashboard` to view the mock dashboard.
 
-## 🎯 How to Run the Project
+---
+
+## 🔢 How to Run the Project
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/planify.git
-   cd planify
+   git clone https://github.com/Adel2411/Planify-frontend.git
+   cd Planify-frontend
    ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
+3. Run the development server:
+
    ```bash
    npm run dev
    ```
 
-```
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
 
-```
+---
+
+## 🎨 Future Enhancements
+
+- **Backend Integration**: Connect the frontend to the Go backend for real-time roadmap generation.
+- **AI Implementation**: Use Python and LangChain to provide dynamic marketing strategies.
+- **Improved Authentication**: Resolve cookie handling for seamless user experience.
+
+---
+
+We’re excited to continue improving Planify and making it a powerful tool for entrepreneurs. Contributions and feedback are welcome! Feel free to check out the [repository](https://github.com/Adel2411/Planify-frontend) and get involved.
+
+Happy building! 🚀
