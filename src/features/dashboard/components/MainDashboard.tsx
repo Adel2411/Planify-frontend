@@ -37,6 +37,46 @@ export function MainDashboard() {
       goals: "Increase online orders by 30%",
       createdAt: "2023-03-10T00:00:00Z",
     },
+    {
+      id: 4,
+      name: "Fitness Gym",
+      industry: "Health & Wellness",
+      targetAudience: "Fitness Enthusiasts",
+      goals: "Launch new fitness program",
+      createdAt: "2023-04-05T00:00:00Z",
+    },
+    {
+      id: 5,
+      name: "Digital Marketing Agency",
+      industry: "Marketing",
+      targetAudience: "Startups",
+      goals: "Grow social media following by 50%",
+      createdAt: "2023-05-12T00:00:00Z",
+    },
+    {
+      id: 6,
+      name: "Web Development Company",
+      industry: "Technology",
+      targetAudience: "Small Businesses",
+      goals: "Launch new website for client",
+      createdAt: "2023-06-25T00:00:00Z",
+    },
+    {
+      id: 7,
+      name: "Mobile App Startup",
+      industry: "Technology",
+      targetAudience: "Young Adults",
+      goals: "Reach 1 million downloads",
+      createdAt: "2023-07-30T00:00:00Z",
+    },
+    {
+      id: 8,
+      name: "Fashion Boutique",
+      industry: "Retail",
+      targetAudience: "Young Adults",
+      goals: "Launch new clothing line",
+      createdAt: "2023-08-18T00:00:00Z",
+    },
   ]);
 
   useEffect(() => {
@@ -52,9 +92,9 @@ export function MainDashboard() {
   }, []);
 
   return (
-    <div className="flex h-screen bg-background">
+    <div className="flex h-screen pt-16 bg-background">
       <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
-      <div className="flex-1 flex flex-col overflow-hidden pt-16">
+      <div className="flex-1 flex flex-col overflow-hidden">
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-background">
           <div className="container mx-auto px-6 py-8">
             <div className="flex justify-between items-center mb-6">
