@@ -32,10 +32,7 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
       <div
         className={`fixed inset-y-0 left-0 transform ${open ? "translate-x-0" : "-translate-x-full"} md:relative md:translate-x-0 transition duration-200 ease-in-out`}
       >
-        <div className="flex h-full w-64 flex-col overflow-y-auto border-r border-border bg-card py-4 px-3 mt-16">
-          <div className="mb-6">
-            <ProfileButton />
-          </div>
+        <div className="flex h-full w-64 flex-col justify-between overflow-y-auto border-r border-border bg-card py-8 px-3">
           <nav className="flex flex-col gap-4">
             <NavItem href="/dashboard" icon="Layout">
               Dashboard
@@ -47,6 +44,9 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
               Logout
             </NavItem>
           </nav>
+          <div>
+            <ProfileButton />
+          </div>
         </div>
       </div>
     </>
