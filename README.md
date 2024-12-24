@@ -31,8 +31,40 @@ Planify is a SaaS platform designed to empower entrepreneurs and business owners
 | Layer              | Technology           |
 | ------------------ | -------------------- |
 | **Frontend**       | Next.js (TypeScript) |
-| **Backend**        | Go (Placeholder)     |
+| **Backend**        | Go                   |
 | **AI Integration** | Python (LangChain)   |
+
+---
+
+## 📁 Project Structure
+
+This project follows the feature-sliced architecture. Below is an overview of the main folders and their purposes:
+
+```
+.
+├── components.json
+├── docker-compose.yml
+├── Dockerfile
+├── next.config.ts
+├── next-env.d.ts
+├── node_modules/          # Project dependencies
+├── package.json           # Project metadata and scripts
+├── package-lock.json      # Dependency lock file
+├── postcss.config.mjs     # PostCSS configuration
+├── public/                # Static assets (images, icons, etc.)
+├── README.md              # Project documentation
+├── src/                   # Source code
+│   ├── api/               # API request definitions
+│   ├── app/               # Next.js app router pages
+│   ├── components/        # Reusable UI components
+│   ├── features/          # Feature-specific modules
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions and libraries
+│   ├── middleware.ts      # Middleware configurations
+│   └── utils/             # General utility functions
+├── tailwind.config.ts     # Tailwind CSS configuration
+└── tsconfig.json          # TypeScript configuration
+```
 
 ---
 
@@ -47,33 +79,24 @@ Planify is a SaaS platform designed to empower entrepreneurs and business owners
 
 ---
 
-## 🚚 Workaround: Manually Set Authentication Cookie
+## 🚚 Workaround: Setting Up Quick Access
 
-To access the `/dashboard` route, follow these steps to set an `accessToken` cookie in your browser:
+To view the dashboard, you'll need to set a temporary cookie. Here's how:
 
-1. **Open Developer Tools**
+1. Open your browser's Developer Tools (`F12`)
+2. Go to the Application/Storage tab
+3. Find Cookies > localhost
+4. Add a new cookie:
+   - Name: `accessToken`
+   - Value: `dummyToken123`
 
-   - Press `F12` or right-click anywhere on the page and select **Inspect**.
-
-2. **Go to Application/Storage Tab**
-
-   - Navigate to the **Application** tab (Chrome/Edge) or **Storage** tab (Firefox).
-
-3. **Set the Cookie**
-
-   - Locate the **Cookies** section under **Storage**.
-   - Choose the domain of your app (e.g., `localhost`).
-   - Add a new cookie with these details:
-     - **Name:** `accessToken`
-     - **Value:** Any string (e.g., `dummyToken123`)
-     - **Domain:** Your app’s domain (e.g., `localhost`).
-
-4. **Refresh the Page**
-   - Navigate to `/dashboard` to view the mock dashboard.
+Once done, refresh the page and you will be redirected to `/dashboard`.
 
 ---
 
 ## 🔢 How to Run the Project
+
+### Method 1: Standard Installation
 
 1. Clone the repository:
 
@@ -98,6 +121,32 @@ To access the `/dashboard` route, follow these steps to set an `accessToken` coo
    ```
    http://localhost:3000
    ```
+
+### Method 2: Using Docker
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Adel2411/Planify-frontend.git
+   cd Planify-frontend
+   ```
+
+2. Start the container using Docker Compose:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+3. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+To stop the Docker containers:
+
+```bash
+docker-compose down
+```
 
 ---
 
