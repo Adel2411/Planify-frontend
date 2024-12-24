@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
-  const rows = new Array(150).fill(1);
-  const cols = new Array(100).fill(1);
+  const rows = new Array(50).fill(1);
+  const cols = new Array(40).fill(1);
 
   return (
     <div
@@ -21,7 +21,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="w-16 h-8  border-l  border-primary opacity-50 relative"
+          className="w-28 h-14  border-l  border-primary opacity-50 relative"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -33,7 +33,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="w-16 h-8  border-r border-t border-primary opacity-50 relative"
+              className="w-28 h-14  border-r border-t border-primary opacity-50 relative"
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
