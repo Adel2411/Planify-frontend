@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Logo() {
   return (
-    <div className="fixed left-4 top-4">
+    <div className="fixed left-4 top-4 z-20">
       <Link
         href="/"
         className="flex justify-center items-center gap-2 hover:text-primary"

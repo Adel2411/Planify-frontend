@@ -97,9 +97,14 @@ export function MainDashboard() {
             <h1 className="text-3xl font-semibold text-foreground">
               Dashboard
             </h1>
-            <Link href="/add-business">
-              <Button>Add Business</Button>
-            </Link>
+            <Button
+              variant="secondary"
+              size="sm"
+              asChild
+              className="hover:bg-primary/10 hover:text-primary"
+            >
+              <Link href="/dashboard/add-business">Add Business</Link>
+            </Button>
           </div>
           <SearchBar value={searchQuery} onChange={setSearchQuery} />
           <BusinessCardGrid

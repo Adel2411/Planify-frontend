@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
-import { ModeToggle } from "@/components/ModeToggle";
 import { Toaster } from "@/components/ui/toaster";
 import Logo from "@/components/Logo";
 
@@ -36,7 +35,6 @@ export default function RootLayout({
         >
           <Logo />
           {children}
-          <ModeToggle />
         </ThemeProvider>
         <Toaster />
       </body>
