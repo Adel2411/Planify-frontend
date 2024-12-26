@@ -65,14 +65,14 @@ export default function AddBusinessPage() {
         timeline: formData.timeline,
       };
       await addBusiness(newBusiness);
-      router.push("/dashboard");
+      router.push("/dashboard/businesses");
     } catch (error) {
       console.error("Failed to add business:", error);
     }
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="w-full flex justify-center items-center">
       <Card className="max-w-lg mx-auto">
         <CardHeader>
           <CardTitle>Add New Business - Step {currentStep + 1}</CardTitle>
