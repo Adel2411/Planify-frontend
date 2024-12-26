@@ -61,10 +61,10 @@ export function ProfileButton() {
 
       <Button
         variant="ghost"
-        className="w-full rounded-full"
+        className="w-full"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium text-sm">Username</span>
+        <span className="font-medium text-sm">Business Man</span>
         {!isOpen ? (
           <ChevronUp className="w-4 h-4" />
         ) : (
