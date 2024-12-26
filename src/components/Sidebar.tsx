@@ -12,7 +12,7 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
   return (
     <>
       <Button
-        className="md:hidden fixed right-4 top-4 z-10"
+        className="md:hidden fixed right-4 top-4 z-30"
         size="icon"
         onClick={() => setOpen(!open)}
       >
