@@ -38,7 +38,7 @@ Planify is a SaaS platform designed to empower entrepreneurs and business owners
 
 ## 📁 Project Structure
 
-This project follows the feature-sliced architecture. Below is an overview of the main folders and their purposes:
+This project follows a **feature-based structure**, which organizes the codebase by grouping related functionalities together. Below is an overview of the main folders and their purposes:
 
 ```
 .
@@ -94,7 +94,21 @@ Once done, refresh the page and you will be redirected to `/dashboard`.
 
 ---
 
-## 🔢 How to Run the Project
+## 🎨 Future Enhancements
+
+- **Backend Integration**: Connect the frontend to the Go backend for real-time roadmap generation.
+- **AI Implementation**: Use Python and LangChain to provide dynamic marketing strategies.
+- **Improved Authentication**: Resolve cookie handling for seamless user experience.
+
+---
+
+## 🌐 Live Demo
+
+Check out the live demo of Planify [here](https://planify-frontend.vercel.app/).
+
+---
+
+## 🔢 How to Run the Project (Optional)
 
 ### Method 1: Standard Installation
 
@@ -147,14 +161,6 @@ To stop the Docker containers:
 ```bash
 docker-compose down
 ```
-
----
-
-## 🎨 Future Enhancements
-
-- **Backend Integration**: Connect the frontend to the Go backend for real-time roadmap generation.
-- **AI Implementation**: Use Python and LangChain to provide dynamic marketing strategies.
-- **Improved Authentication**: Resolve cookie handling for seamless user experience.
 
 ---
 
