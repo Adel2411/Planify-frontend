@@ -1,5 +1,5 @@
+import { deleteBusiness } from "../lib/api";
 import { Business } from "../types";
-import { deleteBusiness } from "../utils";
 import { BusinessCard } from "./BusinessCard";
 
 // Mock data for business cards

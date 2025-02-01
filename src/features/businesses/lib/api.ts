@@ -1,4 +1,4 @@
-import { Business, NewBusiness } from "../types";
+import { NewBusiness, Business } from "../types";
 
 const API_URL = "/api/businesses"; // Replace with your actual API URL
 

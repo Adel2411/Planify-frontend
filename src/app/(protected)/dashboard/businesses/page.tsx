@@ -1,4 +1,4 @@
-import { MainDashboard } from "@/features/dashboard/components/MainDashboard";
+import { MainDashboard } from "@/features/businesses/components/MainDashboard";
 
 export default function DashboardPage() {
   return <MainDashboard />;

@@ -2,15 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 import Link from "next/link";
-
-interface Business {
-  id: number;
-  name: string;
-  industry: string;
-  targetAudience: string;
-  goals: string;
-  createdAt: string;
-}
+import { Business } from "../types";
 
 interface BusinessCardProps {
   business: Business;
