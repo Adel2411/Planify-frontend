@@ -38,7 +38,7 @@ function RegisterForm() {
         description: response.message,
       });
       form.reset();
-      redirect("/dashboard");
+      redirect("/businesses");
     }
   }
 

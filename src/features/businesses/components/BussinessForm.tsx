@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -10,19 +8,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { addBusiness } from "@/features/dashboard/utils";
-import { NewBusiness } from "@/features/dashboard/types";
+import { steps } from "@/features/businesses/constants";
+import { NewBusiness } from "@/features/businesses/types";
+import { addBusiness } from "@/features/businesses/lib/api";
+import BusinessFormStep from "./BusinessFormStep";
 
-const steps = [
-  { title: "Basic Information", fields: ["name", "industry"] },
-  { title: "Target Audience", fields: ["targetAudience"] },
-  { title: "Goals", fields: ["goals"] },
-  { title: "Budget & Timeline", fields: ["budget", "timeline"] },
-];
-
-export default function AddBusinessPage() {
+export default function BusinessForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -56,16 +47,9 @@ export default function AddBusinessPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const newBusiness: NewBusiness = {
-        name: formData.name,
-        industry: formData.industry,
-        targetAudience: formData.targetAudience,
-        goals: formData.goals,
-        budget: formData.budget,
-        timeline: formData.timeline,
-      };
+      const newBusiness: NewBusiness = { ...formData };
       await addBusiness(newBusiness);
-      router.push("/dashboard/businesses");
+      router.push("/businesses");
     } catch (error) {
       console.error("Failed to add business:", error);
     }
@@ -79,34 +63,11 @@ export default function AddBusinessPage() {
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent>
-            {steps[currentStep].fields.map((field) => (
-              <div key={field} className="mb-4">
-                <label
-                  htmlFor={field}
-                  className="block text-sm font-medium text-foreground mb-1"
-                >
-                  {field.charAt(0).toUpperCase() + field.slice(1)}
-                </label>
-                {field === "goals" ? (
-                  <Textarea
-                    id={field}
-                    name={field}
-                    value={formData[field as keyof typeof formData]}
-                    onChange={handleInputChange}
-                    className="w-full"
-                  />
-                ) : (
-                  <Input
-                    type="text"
-                    id={field}
-                    name={field}
-                    value={formData[field as keyof typeof formData]}
-                    onChange={handleInputChange}
-                    className="w-full"
-                  />
-                )}
-              </div>
-            ))}
+            <BusinessFormStep
+              step={steps[currentStep]}
+              formData={formData}
+              handleInputChange={handleInputChange}
+            />
           </CardContent>
           <CardFooter className="flex justify-between">
             <Button

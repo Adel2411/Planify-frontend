@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./theme-provider";
 import { Toaster } from "@/components/ui/toaster";
-import Logo from "@/components/Logo";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/providers/theme-provider";
+import { ReactQueryProvider } from "@/providers/react-query-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,10 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.className} antialiased bg-gradient-to-br from-primary/10 to-background/50`}
-        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
@@ -34,8 +33,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
+          <ReactQueryProvider>
+            <Header />
+            {children}
+          </ReactQueryProvider>
         </ThemeProvider>
         <Toaster />
       </body>
