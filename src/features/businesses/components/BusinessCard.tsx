@@ -15,7 +15,7 @@ export function BusinessCard({ business, onDelete }: BusinessCardProps) {
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-primary">
           <Button variant="link" className="p-0 text-md" asChild>
-            <Link href={`/dashboard/${business.id}`}>{business.name}</Link>
+            <Link href={`/businesses/${business.id}`}>{business.name}</Link>
           </Button>
         </CardTitle>
         <Button variant="ghost" size="sm" onClick={onDelete}>

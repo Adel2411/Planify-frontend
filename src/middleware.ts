@@ -7,17 +7,17 @@ export function middleware(req: NextRequest) {
 
   // Define public and protected routes
   const publicRoutes = ["/", "/login", "/register"];
-  const protectedRoutes = ["/dashboard/"];
+  const protectedRoutes = ["/add-business", "/businesses", "/settings"];
 
   // If the user is authenticated and visits public routes, redirect to dashboard
   if (token && publicRoutes.includes(pathname)) {
-    return NextResponse.redirect(new URL("/dashboard/businesses", req.url));
+    return NextResponse.redirect(new URL("/businesses", req.url));
   }
 
   // If the user is not authenticated and visits protected routes, redirect to login
   if (
     !token &&
-    (protectedRoutes.includes(pathname) || pathname.startsWith("/dashboard/"))
+    (protectedRoutes.includes(pathname) || pathname.startsWith("/businesses/"))
   ) {
     return NextResponse.redirect(new URL("/", req.url));
   }

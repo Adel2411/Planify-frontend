@@ -34,13 +34,13 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
         <div className="flex h-full w-64 flex-col justify-between overflow-y-auto border-r border-border bg-card py-8 px-3">
           <nav className="flex flex-col items-s gap-12 pt-12">
             <div className="flex flex-col">
-              <NavItem href="/dashboard/businesses" icon="Building2">
+              <NavItem href="/businesses" icon="Building2">
                 Businesses
               </NavItem>
-              <NavItem href="/dashboard/add-business" icon="Plus">
+              <NavItem href="/add-business" icon="Plus">
                 Add Business
               </NavItem>
-              <NavItem href="/dashboard/settings" icon="Settings">
+              <NavItem href="/settings" icon="Settings">
                 Settings
               </NavItem>
             </div>

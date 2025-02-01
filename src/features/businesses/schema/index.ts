@@ -10,7 +10,7 @@ const BaseBusinessSchema = z.object({
 });
 
 const BusinessSchema = BaseBusinessSchema.extend({
-  id: z.number().positive("ID must be a positive number"),
+  id: z.string().toLowerCase(),
   createdAt: z.string().min(1, "Creation date is required"),
 });
 

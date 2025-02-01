@@ -7,7 +7,7 @@ export const steps = [
 
 export const initialBusinesses = [
   {
-    id: 1,
+    id: "tech-startup",
     name: "Tech Startup",
     industry: "Technology",
     targetAudience: "Small Businesses",
@@ -15,7 +15,7 @@ export const initialBusinesses = [
     createdAt: "2023-01-15T00:00:00Z",
   },
   {
-    id: 2,
+    id: "e-commerce-store",
     name: "E-commerce Store",
     industry: "Retail",
     targetAudience: "Young Adults",
@@ -23,7 +23,7 @@ export const initialBusinesses = [
     createdAt: "2023-02-20T00:00:00Z",
   },
   {
-    id: 3,
+    id: "local-restaurant",
     name: "Local Restaurant",
     industry: "Food & Beverage",
     targetAudience: "Families",
@@ -31,7 +31,7 @@ export const initialBusinesses = [
     createdAt: "2023-03-10T00:00:00Z",
   },
   {
-    id: 4,
+    id: "fitness-gym",
     name: "Fitness Gym",
     industry: "Health & Wellness",
     targetAudience: "Fitness Enthusiasts",
@@ -39,7 +39,7 @@ export const initialBusinesses = [
     createdAt: "2023-04-05T00:00:00Z",
   },
   {
-    id: 5,
+    id: "digital-marketing-agency",
     name: "Digital Marketing Agency",
     industry: "Marketing",
     targetAudience: "Startups",
@@ -47,7 +47,7 @@ export const initialBusinesses = [
     createdAt: "2023-05-12T00:00:00Z",
   },
   {
-    id: 6,
+    id: "web-development-company",
     name: "Web Development Company",
     industry: "Technology",
     targetAudience: "Small Businesses",
@@ -55,7 +55,7 @@ export const initialBusinesses = [
     createdAt: "2023-06-25T00:00:00Z",
   },
   {
-    id: 7,
+    id: "mobile-app-startup",
     name: "Mobile App Startup",
     industry: "Technology",
     targetAudience: "Young Adults",
@@ -63,7 +63,7 @@ export const initialBusinesses = [
     createdAt: "2023-07-30T00:00:00Z",
   },
   {
-    id: 8,
+    id: "fashion-boutique",
     name: "Fashion Boutique",
     industry: "Retail",
     targetAudience: "Young Adults",

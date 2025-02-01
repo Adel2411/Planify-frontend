@@ -22,10 +22,6 @@ export function MainDashboard() {
     queryFn: getBusinesses,
   });
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="flex-1 flex flex-col overflow-hidden">
       <main className="flex-1 overflow-x-hidden overflow-y-auto bg-background">
@@ -40,15 +36,21 @@ export function MainDashboard() {
               asChild
               className="hover:bg-primary/10 hover:text-primary"
             >
-              <Link href="/dashboard/add-business">Add Business</Link>
+              <Link href="/add-business">Add Business</Link>
             </Button>
           </div>
           <SearchBar value={searchQuery} onChange={setSearchQuery} />
-          <BusinessCardGrid
-            searchQuery={searchQuery}
-            businesses={error ? initialBusinesses : businesses}
-            setBusinesses={() => {}}
-          />
+          {isLoading ? (
+            <div className="flex justify-center">
+              <h1 className="text-2xl text-bold">Loading...</h1>
+            </div>
+          ) : (
+            <BusinessCardGrid
+              searchQuery={searchQuery}
+              businesses={error ? initialBusinesses : businesses}
+              setBusinesses={() => {}}
+            />
+          )}
         </div>
       </main>
     </div>

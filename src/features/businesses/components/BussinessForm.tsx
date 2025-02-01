@@ -49,7 +49,7 @@ export default function BusinessForm() {
     try {
       const newBusiness: NewBusiness = { ...formData };
       await addBusiness(newBusiness);
-      router.push("/dashboard/businesses");
+      router.push("/businesses");
     } catch (error) {
       console.error("Failed to add business:", error);
     }
