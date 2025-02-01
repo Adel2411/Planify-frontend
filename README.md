@@ -1,8 +1,6 @@
-# Planify - Hackathon Project 🚀
+# Planify 🚀
 
-[Planify Frontend Repository](https://github.com/Adel2411/Planify-frontend)
-
-Planify is a SaaS platform designed to empower entrepreneurs and business owners by generating personalized, AI-driven marketing roadmaps. Built for a hackathon, Planify simplifies the process of creating and managing business marketing plans through an intuitive and modern interface.
+Planify is a SaaS platform designed to empower entrepreneurs and business owners by generating personalized, AI-driven marketing roadmaps. Planify simplifies the process of creating and managing business marketing plans through an intuitive and modern interface.
 
 ---
 
