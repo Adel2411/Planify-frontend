@@ -2,6 +2,8 @@ import { AlignJustify, LogOut, X } from "lucide-react";
 import { NavItem } from "./NavItem";
 import { ProfileButton } from "./ProfileButton";
 import { Button } from "./ui/button";
+import { logOut } from "@/features/auth/utils";
+import { redirect } from "next/navigation";
 
 interface SidebarProps {
   open: boolean;
@@ -9,6 +11,11 @@ interface SidebarProps {
 }
 
 export function Sidebar({ open, setOpen }: SidebarProps) {
+  const handleLogout = () => {
+    logOut();
+    redirect("/");
+  };
+
   return (
     <>
       <Button
@@ -44,7 +51,11 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
                 Settings
               </NavItem>
             </div>
-            <Button variant="destructive" className="flex items-center mx-4">
+            <Button
+              variant="destructive"
+              className="flex items-center mx-4"
+              onClick={handleLogout}
+            >
               <LogOut className="mr-3 h-5 w-5" />
               <span className="text-sm font-medium">Logout</span>
             </Button>
